@@ -6,10 +6,10 @@ code -r .\MicroService_Demo\
 
 # Docker
 
-1.docker run -p 8080:80 -d username/platformservice
-2.docker ps
-3.docker stop <containerid>
-4.docker push username/platformservice
+1. docker run -p 8080:80 -d username/platformservice
+2. docker ps
+3. docker stop <containerid>
+4. docker push username/platformservice
 
 # Kubernates commands used
 
@@ -17,3 +17,8 @@ code -r .\MicroService_Demo\
 2. kubectl get deployment
 3. kubectl get pods
 4. Kubectl delete deployment platforms-depl.yaml
+
+<!-- node port to access the kubernates  container-->
+
+kubectl apply -f platforms-np-sv.yaml
+kubectl get services
