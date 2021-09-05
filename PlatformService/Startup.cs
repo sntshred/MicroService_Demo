@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,7 +30,8 @@ namespace PlatformService
     {
 
       IServiceCollection serviceCollection = services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
-      services.AddScoped<IPlatformRepo, PlatformRepo>();
+
+       services.AddScoped<IPlatformRepo, PlatformRepo>();
       services.AddControllers();
 
       services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
