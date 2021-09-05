@@ -1,5 +1,7 @@
 # MicroService_Demo
 
+## Target .net  particular framework 
+dotnet new webapi -n CommandsService -f net5.0
 ## Open particular directory file using vs code
 
 code -r .\MicroService_Demo\
