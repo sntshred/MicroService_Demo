@@ -1,7 +1,9 @@
 # MicroService_Demo
 
-## Target .net  particular framework 
+## Target .net particular framework
+
 dotnet new webapi -n CommandsService -f net5.0
+
 ## Open particular directory file using vs code
 
 code -r .\MicroService_Demo\
@@ -24,3 +26,7 @@ code -r .\MicroService_Demo\
 
 kubectl apply -f platforms-np-sv.yaml
 kubectl get services
+
+## Points
+
+1. We us **HttpFactory** because if your making multiple requests using httpClient, it manages connection safety, you dont end up connection exhaustion
