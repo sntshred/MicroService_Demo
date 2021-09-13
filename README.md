@@ -52,8 +52,16 @@ kubectl get services
 2. kubectl rollout restart deployment <name of the deployment>
 3. kubectl get pods
 
+## Ngnix ingress controller setup
+
+1. kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/cloud/deploy.yaml
+2. kubectl get pods --namespace=ingress-nginx
+3. kubectl get services --namespace=ingress-nginx
+4. kubectl apply -f .\ingress-serv.yaml
+
 ## Points
 
 1. We us **HttpFactory** because if your making multiple requests using httpClient, it manages connection safety, you dont end up connection exhaustion
 
 2. **K8S** - When we deplay the code in kubernettes it will run as production environment, our localhost settting wont work there.
+3. **Namespace** - kubectl get pods --namespace=ingress-nginx: by default K8S works on default namespace, but nginx has its own namespace, to access the nginx pods we need to specify the namespace, otherwise in default namespace it doesn't return any nginx pods
