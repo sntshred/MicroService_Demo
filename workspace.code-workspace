@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "CommandsService"
+	},
+	{
+		"path": "K8S"
+	},
+	{
+		"path": "PlatformService"
+	}
+],
+  "settings": {
+    "omnisharp.disableMSBuildDiagnosticWarning": true
+  }
+}
